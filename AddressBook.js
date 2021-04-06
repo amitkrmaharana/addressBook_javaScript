@@ -78,25 +78,15 @@ class AddressBook {
     }
 
     toString() {
-        return "First Name=" + this.first_name + "\nLast Name=" + this.last_name + "\nAddress=" + this.address +
-            "\nCity=" + this.city + "\nState=" + this.state + "\nZip=" + this.zip + "\nPhone Number=" + this.phone_number +
-            "\nEmail=" + this.email;
+        return "First Name = " + this.first_name + ", Last Name = " + this.last_name + ", Address = " + this.address +
+            ", City = " + this.city + ", State = " + this.state + ", Zip = " + this.zip + ", Phone Number = " + this.phone_number +
+            ", Email = " + this.email;
     }
 }
 
-
-let addressbook = new AddressBook("Amit", "Kumar", "Ptype", "Jamshedpur", "Jharkhand", 831004, "91-8210029078","ak657harley@gmail.com");
-console.log(addressbook.toString());
-
-try {
-    addressbook.phone_number = "91 8210029078";
-    addressbook.email = "abc123@gmail.a";
-    addressbook.zip = "A25123";
-    addressbook.state = "dsjfh";
-    addressbook.city = "hjdss";
-    addressbook.address = "fgs";
-    addressbook.last_name = "Ku";
-    addressbook.first_name = "amit";
-} catch (e) {
-    console.error(e);
-}
+let addressbookArr = new Array();
+let addressbook1 = new AddressBook("Amit", "Kumar", "Ptype", "Jamshedpur", "Jharkhand", 831004, "91-8210029078","ak657harley@gmail.com");
+let addressbook2 = new AddressBook("Abhishek","Kulkarni","Ztype","Khurda","Odisha",725445,"91-7892563654","abhi12@gmail.com");
+addressbookArr.push(addressbook1.toString());
+addressbookArr.push(addressbook2.toString());
+console.log(addressbookArr);
